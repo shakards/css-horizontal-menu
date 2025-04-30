@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Horizontal Menu</title>
+    <style>
+        /* Horizontal Navigation */
+        .nav-horizontal {
+            background: #2c3e50;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        .nav-horizontal ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .nav-horizontal li {
+            position: relative;
+        }
+        
+        .nav-horizontal a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-horizontal a:hover {
+            background: #3498db;
+        }
+        
+        /* Dropdown Menu */
+        .nav-horizontal li:hover > ul {
+            display: block;
+        }
+        
+        .nav-horizontal ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #34495e;
+            min-width: 200px;
+            flex-direction: column;
+        }
+        
+        .nav-horizontal ul ul ul {
+            left: 100%;
+            top: 0;
+        }
+        
+        /* Active State */
+        .nav-horizontal a.active {
+            background: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-horizontal">
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Products</a>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Graphic Design</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Services</a>
+                <ul>
+                    <li><a href="#">SEO</a></li>
+                    <li><a href="#">Social Media</a>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
